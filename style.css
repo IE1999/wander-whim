@@ -1,0 +1,169 @@
+/*variables for dark mode feature*/
+:root {
+	--bg-color-dark: black;
+	--text-color-dark: white;
+	--gradient-color-dark: linear-gradient(#312eff, #52ACFF);
+	--button-color-dark: linear-gradient(#1f5f21, #4CAF50);
+}
+
+.dark-mode {
+	background-color: var(--bg-color-dark);
+	color: var(--text-color-dark);
+	transition: background 0.3s linear;/*smooth transition animation*/
+}
+
+.theme-toggle-button {
+	background: white;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	max-width: 55px;
+	max-height: 55px;
+	margin: 0;
+	transition: all 400ms ease;
+}
+.toggle-container {
+	display: block;
+	margin-top: 20px;
+}
+.theme-toggle-button:hover {
+	transition: all 400ms ease;
+	background-color: #52ACFF;
+	color: #3E8E41;
+}
+
+.dark-mode select {
+	background-color: black;
+	color: white;
+}
+
+.dark-mode body .vacation-form .result-box {
+	background: var(--gradient-color-dark);
+}
+.dark-mode .generate-button {
+	background: var(--button-color-dark);
+}
+
+/*media query to create blinking text animations*/
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+/*styling for body*/
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	transition: background 0.3s linear;/*smooth transition animation*/
+}
+
+/*styling for header section*/
+.header {
+	background: linear-gradient(#52ACFF,#5552FF);
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+}
+.dark-mode {
+	margin: 0;
+	top: 10px;
+	right: 10px;
+}
+/*styling for earth icon*/
+img {
+	width: 50px;
+	height: 50px;
+	border: 50%;
+	margin-top: 10px;
+	transition: all 400ms ease;
+}
+img:hover {
+	border-radius: 50%;
+	border: 2px solid #4CAF50;
+	transition: all 400ms ease;
+	transform: scale(1.5);
+}
+
+/*styling for h1 tag*/
+h1 {
+	color: #1916bb;
+	font-family:'Orbitron', sans-serif;
+	animation: blink 2s linear infinite;
+}
+
+p {
+	font-family:'Orbitron', sans-serif;
+}
+.select-options {
+	color: #0400ff;
+	animation: blink 1s linear infinite;
+}
+
+/*styling for input form*/
+.vacation-form {
+	align-items: center;
+	margin-top: 0;
+	background: linear-gradient(#52ACFF,#5552FF);
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	max-width: fit-content;
+	margin: 0 auto;
+	box-sizing: border-box;/*keeps from being stuck to the left*/
+
+}
+
+/*styling for result box*/
+.result-box {
+	align-items: center;
+	margin-top: 30px;
+	background: linear-gradient(#52ACFF,#5552FF);
+	text-align: center;
+	padding: 10px;
+	border-radius: 10px;
+	max-width: fit-content;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.main-container{
+	margin-top: 30px;
+	display: flex;
+}
+
+label {
+	display: block;
+	margin-top: 20px;
+}
+
+select {
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
+}
+
+/*styling for generate button*/
+.generate-button {
+	padding: 10px 20px;
+	background: linear-gradient(#4CAF50, #3E8E41);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	cursor: pointer;
+	transition: all 400ms ease;
+}
+
+.generate-button:hover {
+	background: linear-gradient(#3E8E41, #4CAF50);
+	transition: all 400ms ease;
+}

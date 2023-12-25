@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>wander whim</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" async></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Link for Dark Mode Icon-->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <!--Link for Orbitron font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body class="dark">
+        <div class="header">
+            <img src="earth_icon.png" alt="icon of earth">
+            <h1>Wander Whim</h1>
+            <div class="toggle-container">
+                <button class="theme-toggle-button" onclick="myFunction()">
+                    <i class="bx bxs-moon"></i>
+                </button>
+            </div>
+        </div>
+        <div>
+            <p>Time for more <span>spontaneous</span> vacations to spice up your life!</p>
+            <p class="select-options">>> Select options to start! <<</p>
+        </div>
+        <form id="vacation-form" class="vacation-form"> 
+            <!--Dropdown selector for continent-->
+            <div class="choice-select">
+                <label for="continent">Select a Continent:</label>
+                <select name="continent" id="continent">
+                    <option value="">--Please choose an option--</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="oceania">Oceania</option>
+                    <option value="europe">Europe</option>
+                    <option value="northamerica">North America</option>
+                    <option value="southamerica">South America</option>
+                </select><br><br>
+            </div>
+
+
+            <!--Dropdown Selector for activity-->
+            <label for="activity">Preferred Activity:</label>
+            <select name="activity" id="activity">
+                <option value="">--Please choose an option--</option>
+                <option value="relaxing">Relaxation</option>
+                <option value="beach">Beach</option>
+                <option value="culture">Culture</option>
+                <option value="adventure">Adventure</option>
+                <option value="sightseeing">Sightseeing</option>
+                <option value="nightlife">Nightlife</option>
+                <option value="nature">Nature</option>
+            </select><br><br>
+            <!--Dropdown Selector for budget-->
+            <label for="budget">Select a Budget:</label>
+            <select id="budget">
+                <option value="">--Please choose an option--</option>
+                <option value="low">Low</option> <!--$1000 to $1500-->
+                <option value="medium">Medium</option> <!--$3000 to $5000-->
+                <option value="high">High</option> <!--$10000 to $50000-->
+            </select>
+            <br>
+            <button type="button" class="generate-button" id="generateButton">Generate Vacation</button>
+            <br>
+            <!-- <button type="button" class="randomize-button" id="randomizeButton">Randomize</button> -->
+        </form>
+        <br>
+        <div class="main-container">
+            <section id="result-box" class="result-box">
+            </section>
+        </div>
+        <script>
+            //Dark Mode
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
+    </body>
+</html>
