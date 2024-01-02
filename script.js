@@ -103,12 +103,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 });
 
-//Randomizer button event listener
-randomizeButton.addEventListener('click', async function() {
-	//Generate random idea if user makes no selections
-	await Promise.all([getCountry(), getActivity(), getBudget()]);
-
-	//Print results
-	printResult();
+//Makes sure DOM is fully loaded before running
+document.addEventListener("DOMContentLoaded", function() {
+	randomizeButton.addEventListener('click', async function() {
+	  await Promise.all([getCountry(), getActivity(), getBudget()]);
+	  printResult();
+	});
 });
-
